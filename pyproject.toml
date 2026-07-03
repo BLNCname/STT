@@ -1,0 +1,18 @@
+[project]
+name = "speech-to-text-desktop"
+version = "0.1.0"
+description = "Windows desktop application for transcribing audio and video files to text."
+requires-python = ">=3.11"
+dependencies = [
+    "av>=17,<18",
+    "ctranslate2>=4.7,<5",
+    "faster-whisper>=1.1,<2",
+    "nvidia-cublas-cu12>=12.9,<13",
+    "nvidia-cuda-runtime-cu12>=12.9,<13",
+]
+
+[project.scripts]
+speech-to-text = "speech_to_text_app.webapp:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
